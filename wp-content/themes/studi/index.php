@@ -1,5 +1,3 @@
-<div>
-  <h1>
-    <?php  ?>
-  </h1>
-</div>
+  <h1><?= the_title() ?></h1>
+  <p>lorem ipsum</p>
+
