@@ -7,6 +7,8 @@
 
 ?>
 
+<p>Modèle de page: Accueil</p>
+
 <h1><?= the_title() ?></h1>
 
 <a href="">Bouton</a>

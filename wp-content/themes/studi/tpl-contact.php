@@ -1,3 +1,4 @@
+<p>Modèle de page: Contact</p>
 <?php
 /* Template Name: Modèle page contact */
 
