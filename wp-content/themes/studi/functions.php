@@ -33,7 +33,7 @@ function create_custom_posttype_project()
     'menu_icon' => 'dashicons-admin-site',
     'menu_position' => 5,
     // On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
-   /*  'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',), */
+    /*  'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',), */
     /* 
 		* Différentes options supplémentaires
 		*/
@@ -100,3 +100,22 @@ function create_taxo_project()
 };
 
 add_action('init', 'create_taxo_project');
+
+
+// ***************** fonction charge le css ***************
+
+function load_styles()
+{ {
+    // Ajoute le fichier my-style.css depuis le répertoire du thème
+    wp_enqueue_style(
+      'main',
+      get_template_directory_uri() . '/css/my-style.css',
+        array(),
+      '1.0',
+      'all' 
+    );
+  }
+}
+// !! ne pas oublier de lancer les métadata dans le header (wp_head())
+add_action('wp_enqueue_scripts', 'load_styles');
+

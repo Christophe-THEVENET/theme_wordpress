@@ -6,6 +6,7 @@
 // !!!!!!!!! bug WP !!!!!!!!!!!
 // si bug ilfaut aller réenregistrer les permaliens ds réglages
 //!!!!!!!!!!!!!!!!!!!!
+get_header();
 ?>
 
 
@@ -20,4 +21,6 @@
 // idem pour la taxonomie
 // a régler 
 // formulaire Taxonomie  est égale a Client
+
+get_footer();
 
