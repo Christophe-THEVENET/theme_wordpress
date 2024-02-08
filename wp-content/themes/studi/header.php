@@ -10,7 +10,6 @@
   //récupérer la fonction load_styles() créé ds les fonction
 
   // charger les métadata (css perso ici)
-
   wp_head();
 
   ?>

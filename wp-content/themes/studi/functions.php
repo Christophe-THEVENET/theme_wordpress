@@ -28,7 +28,7 @@ function create_custom_posttype_project()
   );
   $args = array(
     'label'  => __('Projets'),
-    'description' => __('Tous sur lesprojets'),
+    'description' => __('Tous sur les projets'),
     'labels' => $labels,
     'menu_icon' => 'dashicons-admin-site',
     'menu_position' => 5,

@@ -1,4 +1,13 @@
 body {
   background-color: rgb(49, 51, 53);
   color: rgb(203, 193, 210);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.intro {
+  color: aqua;
+}
+
+.image {
+  width: 10rem;
 }
