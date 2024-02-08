@@ -1,8 +1,8 @@
-# créer un thème wordpress
+# créer un thème wordpress from scratch
 
 ## Objectif
 
-👋 Construire un thème wordpress entièrement personnalisé
+👋 Construire un thème wordpress entièrement personnalisé avec un back-office adapté au client
 
 - modèle de page
 - custom post-type
