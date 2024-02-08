@@ -9,6 +9,7 @@
 function create_custom_posttype_project()
 {
   $labels = array(
+    'label' => 'Projets',
     // Le nom au pluriel
     'name' => _x('Projets', 'Post Type General Name'),
     // Le nom au singulier
