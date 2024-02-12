@@ -15,8 +15,8 @@ get_header();
 astuce test de la data recup avec le name de l input en argument
  var_dump(get_field('cover'));  -->
 <?php if (get_field('cover')) : ?>
-  <!--  !!!! cocher ds groupe de champ url pour l image -->
-  <img class="image" src="<?php the_field('cover'); ?>" />
+    <!--  !!!! cocher ds groupe de champ url pour l image -->
+    <img class="image" src="<?php the_field('cover'); ?>" />
 <?php endif; ?>
 
 <br>
@@ -67,10 +67,25 @@ the_field('introduction', $projectOneId); ?>
 <br>
 <?php
 the_field('introduction', $projectTwoId);
+?>
+
+<h2>Suggestion de projet</h2>
+
+<?php
+$params = [
+    'post_type' => 'project',
+    'numberposts' => -1,
+    'exclude' => [$post->ID],
+];
+$projectsSuggested = get_posts($params);
+?>
+<pre>
+    <?= print_r($projectsSuggested) ?>
+</pre>
 
 
 
-
+<?php
 
 
 get_footer();

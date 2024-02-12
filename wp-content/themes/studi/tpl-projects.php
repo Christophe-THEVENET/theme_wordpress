@@ -8,9 +8,7 @@ get_header();
 
     <p><?= the_field('intro') ?></p>
 
-
     <!-- pour récupérer tous les projets on utilise get_posts()  avec des parametres voir doc WP -->
-    <pre>
     <?php
 
     $nbProjetsToShow = get_field('nb_posts_to_show');
@@ -18,7 +16,7 @@ get_header();
     var_dump($nbProjetsToShow);
     /* on parse car on recoit un string  avec get_field()*/
     $nbProjetsToShow = intval($nbProjetsToShow);
-// récup le status des projets a afficher 
+    // récup le status des projets a afficher 
     $stateOfProjetcts = get_field('type_project');
 
     var_dump($stateOfProjetcts);
@@ -28,24 +26,31 @@ get_header();
 
     $params =
         [
+            // type de custom post
             'post_type' => 'project',
             // a l aide d un champ ACF on peut indiquer ds le back combien on veut de posts 
             'numberposts' =>  $nbProjetsToShow,
             'order' => 'ASC',
             'orderby' => 'post_title',
-            'meta_key'=>'state',
-            'meta_value'=> $stateOfProjetcts,
+            'meta_key' => 'state',
+            'meta_value' => $stateOfProjetcts,
         ];
 
     $allProjects = get_posts($params);
-    print_r($allProjects);
-
-    // on peut aussi filtrer avec les fonctions de ACF
-    
-
     ?>
+    <pre>
+        <?= print_r($allProjects); ?>
     </pre>
-</main>
+    <ul>
+        <?php foreach ($allProjects as $project) { ?>
+            <li>
+                <a href="<?= get_permalink($project) ?>">
+                    <?= get_the_title($project) ?>
+                </a>
+            </li>
+        <?php }  ?>
+    </ul>
 
+</main>
 <?php
 get_footer();
