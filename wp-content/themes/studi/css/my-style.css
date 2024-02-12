@@ -8,10 +8,13 @@ body {
     background-color: rgb(49, 51, 53);
     color: rgb(203, 193, 210);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    min-height: 80vh;
+    flex: 1;
 }
 
 header {
@@ -31,10 +34,6 @@ h2 {
     font-size: 2rem;
 }
 
-.intro {
-    color: aqua;
-}
-
 img {
     width: 10rem;
 }
@@ -43,7 +42,12 @@ a {
     color: rgb(106, 232, 232);
 }
 
+p {
+    margin: 1rem!important;
+}
+
 footer {
+    width: 100%;
     height: 4rem;
     background-color: rgba(250, 235, 215, 0.249);
     width: 100%;
@@ -52,5 +56,4 @@ footer {
     align-items: center;
     font-size: 2.5rem;
     color: #373232;
-
 }
