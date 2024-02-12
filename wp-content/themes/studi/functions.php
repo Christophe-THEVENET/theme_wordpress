@@ -99,12 +99,9 @@ function create_taxo_project()
     )
   );
 };
-
 add_action('init', 'create_taxo_project');
 
-
 // ***************** fonction charge le css ***************
-
 function load_styles()
 { {
     // Ajoute le fichier my-style.css depuis le répertoire du thème

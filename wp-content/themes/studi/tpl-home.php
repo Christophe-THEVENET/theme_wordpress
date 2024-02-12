@@ -29,7 +29,6 @@ get_header();
         <article><?= the_field('intro') ?></article>
 
         <!-- ************ A propos ************* -->
-
         <section>
             <h2>A propos de moi</h2>
             <article>
@@ -44,20 +43,15 @@ get_header();
         </section>
 
         <!-- ********* Mes projets ************ -->
-
         <section>
             <!-- !!!!! ds ACF pour le type de champs des projets selectionner relation -->
-
             <h2>Mes projets</h2>
             <p><?php the_field('text_projects') ?></p>
 
             <?php $projects = get_field('projects') ?>
-            <pre>
-  <!-- !!!!! ds ACF select format de retour id -->
+            <pre> <!-- !!!!! ds ACF select format de retour id -->
                 <?= print_r($projects) ?>
-            </pre>
-
-
+            </pre>            <!-- boucle pour afficher les projets -->
             <ul>
                 <?php for ($i = 0; $i < count($projects); $i++) : ?>
                     <li>
@@ -68,9 +62,6 @@ get_header();
             </ul>
 
         </section>
-
-
-
 
     </section>
 </main>
