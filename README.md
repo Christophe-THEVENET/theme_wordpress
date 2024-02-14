@@ -2,7 +2,9 @@
 
 ## Objectif
 
-- Construire un thème wordpress entièrement personnalisé avec un back-office adapté au client avec le plug in ACF pour récupérer les données.
+- Découvrir comment construire un thème wordpress entièrement personnalisé avec un back-office adapté au client avec le plugin ACF pour récupérer les données.
+
+## Programme
 
 - modèle de page
 - custom post-type
